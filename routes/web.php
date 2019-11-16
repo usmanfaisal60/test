@@ -11,9 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 Route::get('ID/{id}', function($id) {
@@ -24,3 +24,13 @@ Route::get('IDOpt/{id?}', function($id = "ID is not defined") {
     echo 'ID : '.$id;
 });
 
+Route::get('/testIndex', 'TestController@index'); //You can see that middleware is invoked
+Route::get('/testOther', 'TestController@other'); //You can see that middleware is invoked here as well
+
+Route::resource('/tesstRes', 'MyController');
+
+class MyClass {
+    public $mango = 'mangooooooo!!!';
+}
+
+Route::get('shit', 'TestController@mangoTest');
