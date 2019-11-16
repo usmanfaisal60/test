@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+Route::get('ID/{id}', function($id) {
+    echo 'ID : '.$id;
 });
+
+Route::get('IDOpt/{id?}', function($id = "ID is not defined") {
+    echo 'ID : '.$id;
+});
+
