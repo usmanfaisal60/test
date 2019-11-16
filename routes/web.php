@@ -33,4 +33,4 @@ class MyClass {
     public $mango = 'mangooooooo!!!';
 }
 
-Route::get('shit', 'TestController@mangoTest');
+Route::get('mango', 'TestController@mangoTest');
