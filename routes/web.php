@@ -28,13 +28,10 @@ Route::get('/testIndex', 'TestController@index'); //You can see that middleware 
 Route::get('/testOther', 'TestController@other'); //You can see that middleware is invoked here as well
 
 Route::resource('/tesstRes', 'MyController');
-
-<<<<<<< HEAD
 Route::get('/seeReq/', 'TesstController@seeRequest');
-=======
+
 class MyClass {
     public $mango = 'mangooooooo!!!';
 }
 
 Route::get('mango', 'TestController@mangoTest');
->>>>>>> 2fda07766040af8f4e948a033e7412712e158557
