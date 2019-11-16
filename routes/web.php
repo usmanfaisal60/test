@@ -29,8 +29,4 @@ Route::get('/testOther', 'TestController@other'); //You can see that middleware 
 
 Route::resource('/tesstRes', 'MyController');
 
-class MyClass {
-    public $mango = 'mangooooooo!!!';
-}
-
-Route::get('shit', 'TestController@mangoTest');
+Route::get('/seeReq/', 'TesstController@seeRequest');

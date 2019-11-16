@@ -6,12 +6,6 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    private $obj;
-    public function __construct(\MyClass $obj)
-    {
-        $this->obj = $obj;
-
-    }
 
     public function index () {
         return '<h1>This is the actual response</h1>';
@@ -21,7 +15,13 @@ class TestController extends Controller
         return '<h1>This is coming from other function</h1>';
     }
 
-    public function mangoTest() {
-       dd($this->obj);
+    public function seeRequest(Request $req) {
+        $path = $req->path();
+        $pattern = $req->is('seeReq/*');
+        $url = $req->url();
+
+        echo "The request path is ".$path;
+        echo "<br />is Method: ".$pattern;
+        echo '<br />The request url is '.$url;
     }
 }
