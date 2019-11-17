@@ -226,4 +226,6 @@ return [
 
     ],
 
+    'log'=> 'daily'
+
 ];

@@ -27,11 +27,13 @@ Route::get('IDOpt/{id?}', function($id = "ID is not defined") {
 Route::get('/testIndex', 'TestController@index'); //You can see that middleware is invoked
 Route::get('/testOther', 'TestController@other'); //You can see that middleware is invoked here as well
 
-Route::resource('/tesstRes', 'MyController');
+Route::resource('/testtRes', 'MyController');
 Route::get('/seeReq/', 'TesstController@seeRequest');
 
-class MyClass {
-    public $mango = 'mangooooooo!!!';
-}
+Route::post('seeReq', 'TestController@seeRequest');
+Route::post('getParams', 'TestController@getParams');
 
-Route::get('mango', 'TestController@mangoTest');
+Route::get('setCookie', 'CookiesController@setCookie');
+Route::get('getCookie', 'CookiesController@getCookie');
+
+Route::get('responseTest', 'ResponseController@index');

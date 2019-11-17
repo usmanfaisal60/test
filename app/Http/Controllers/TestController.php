@@ -24,4 +24,12 @@ class TestController extends Controller
         echo "<br />is Method: ".$pattern;
         echo '<br />The request url is '.$url;
     }
+
+    public function getParams(Request $request) {
+        $params = [
+            'username' => $request->username
+        ];
+
+        echo json_encode($params);
+    }
 }
