@@ -39,3 +39,6 @@ Route::get('getCookie', 'CookiesController@getCookie');
 Route::get('responseTest', 'ResponseController@index');
 
 Route::post('validate', 'ValidationController@submitForm');
+
+
+Route::get('sendTestMail', 'MailController@sendTestMail');
